@@ -16,13 +16,6 @@ async function find(context) {
 
     if (context.coligada) {
         binds.coligada = context.coligada.toString()
-        //binds.id = `%${context.id.toUpperCase()}%`
-        //binds.id1 = `%${context.id.toUpperCase()}%`
-        //binds.id2 = `%${context.id.toUpperCase()}%`
-
-        //console.log(binds.id)
-        //console.log(binds.id1)
-        //console.log(binds.id2)
         
         query += ` WHERE codcoligada = :coligada`
     

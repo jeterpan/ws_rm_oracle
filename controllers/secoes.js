@@ -5,8 +5,6 @@ async function get(req, res, next) {
         const context = {}
 
         context.coligada = req.params.coligada
-        console.log("contexto")
-        console.log(context.secao)
 
         const rows = await secoes.find(context)
 

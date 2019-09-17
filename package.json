@@ -1,0 +1,36 @@
+{
+  "name": "ws_rm_oracle",
+  "version": "1.0.0",
+  "description": "WebService RM banco Oracle",
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "morgan": "^1.9.1",
+    "oracledb": "^4.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeterpan/ws_rm_oracle.git"
+  },
+  "keywords": [
+    "WebService",
+    "RM",
+    "Totvs",
+    "Oracle",
+    "oracledb",
+    "node.js",
+    "javascript",
+    "REST"
+  ],
+  "author": "Jeter Costa e Silva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeterpan/ws_rm_oracle/issues"
+  },
+  "homepage": "https://github.com/jeterpan/ws_rm_oracle#readme"
+}
