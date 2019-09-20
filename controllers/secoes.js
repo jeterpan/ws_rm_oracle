@@ -10,7 +10,7 @@ async function get(req, res, next) {
 
         let meuRetorno = {}
 
-        meuRetorno = { rows }
+        meuRetorno = { secoes: rows }
 
         if (req.params.coligada) {
             if (rows.length > 0) {

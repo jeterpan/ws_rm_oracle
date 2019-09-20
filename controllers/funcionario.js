@@ -11,7 +11,7 @@ async function get(req, res, next) {
 
         let meuRetorno = {}
 
-        meuRetorno = { rows }
+        meuRetorno = { funcionario: rows }
 
         if (req.params.coligada && req.params.matricula) {
             if (rows.length > 0) {

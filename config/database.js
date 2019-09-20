@@ -1,8 +1,8 @@
 module.exports = {
     hrPool: {
-        user: 'rm',
-        password: 'rm',
-        connectionString: '192.168.0.120/PRODUCAO',
+        user: process.env.WS_RM_ORA_USUARIO,
+        password: process.env.WS_RM_ORA_SENHA,
+        connectionString: process.env.WS_RM_ORA_CONN_STRING,
         poolMin: 10,
         poolMax: 10,
         poolIncrement: 0
