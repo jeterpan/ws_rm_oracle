@@ -11,24 +11,16 @@ async function find(context) {
     const binds = {}
 
     if (context.coligada) {
-        //binds.id = `%${context.id.toUpperCase()}%`
-        binds.coligada = context.coligada.toString()
-        //binds.id1 = `%${context.id.toUpperCase()}%`
-        //binds.id2 = `%${context.id.toUpperCase()}%`
 
-        console.log('binds.coligada')
-        console.log(binds.coligada)
-        //console.log(binds.id1)
-        //console.log(binds.id2)
+        binds.coligada = context.coligada.toString()
         
         query += ` WHERE codcoligada = :coligada`
-        //query += ` WHERE c.nom_cliente LIKE :id OR c.nom_reduzido LIKE :id1 OR c.cod_cliente LIKE :id2`
+
     } else {
         query += ` WHERE codcoligada <> 0`
     }
-    console.log(query)
+
     const result = await database.simpleExecute(query, binds)
-    console.log(result)
 
     return result.rows
 }

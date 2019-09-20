@@ -6,7 +6,6 @@ const router = require('./router.js')
 const morgan = require('morgan')
 const cors = require('cors')
 
-// Let declara uma variavel com escopo Global
 let hpttServer;
 
 function initialize(){
@@ -21,18 +20,6 @@ function initialize(){
         app.use(morgan('combined'))
 
         app.use('/api', router);
-
-        //app.get('/', async (req, res) => {
-        //    const result = await database.simpleExecute('select cod_empresa,den_reduz from empresa')
-        //    const codigo = result.rows[0].COD_EMPRESA
-        //    const descricao = result.rows[0].DEN_REDUZ
-        //   
-        //    res.end(`codigo: ${codigo} e descricao: ${descricao}`)
-        //})
-
-        //app.get('/', (req,res) => {
-        //    res.end('Hello World!')
-        //})
 
         httpServer.listen(webServerConfig.port)
             .on('listening', () => {

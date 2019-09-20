@@ -6,10 +6,6 @@ SELECT codigo, descricao
   FROM psecao
 `
 
-// Get  - Carrega todas as Seção de uma empresa (Passado como parâmetro o código da empresa selecionada) 
-//  Retorno (CodSeção  e Descição) .
-// select codigo, descricao from psecao where codcoligada = @Pcodicoligada
-
 async function find(context) {
     let query = baseQuery
     const binds = {}
@@ -20,9 +16,8 @@ async function find(context) {
         query += ` WHERE codcoligada = :coligada`
     
     }
-    console.log(query)
+
     const result = await database.simpleExecute(query, binds)
-    console.log(result)
 
     return result.rows
 }

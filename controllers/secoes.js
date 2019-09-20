@@ -20,7 +20,6 @@ async function get(req, res, next) {
                 res.status(404).end()
             }
         } else {
-            //res.status(200).json(meuRetorno)
             res.status(400).json({"mensagem": " Informe a coligada para qual se deseja as secoes"})
         }
     } catch (err) {
