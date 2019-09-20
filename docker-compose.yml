@@ -1,0 +1,11 @@
+version: '3'
+services:
+  web_service:
+    build: .
+    ports:
+    - "3010:3009"
+    links:
+    - instant_client
+  instant_client:
+    image: store/oracle/database-instantclient:12.2.0.1
+  
