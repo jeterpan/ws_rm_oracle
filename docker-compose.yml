@@ -2,6 +2,9 @@ version: '3'
 services:
   web_service:
     build: .
+    environment:
+    - LD_LIBRARY_PATH=/home/cjones/instantclient_12_2
+    - PATH=/home/cjones/instantclient_12_2:$PATH
     ports:
     - "3010:3009"
     links:
