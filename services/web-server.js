@@ -6,7 +6,7 @@ const router = require('./router.js')
 const morgan = require('morgan')
 const cors = require('cors')
 
-let hpttServer;
+let httpServer;
 
 function initialize(){
     return new Promise((resolve, reject) => {
