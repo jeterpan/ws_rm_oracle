@@ -38,3 +38,10 @@ function simpleExecute(declaracao, binds, opcoes = {}) {
 }
 
 module.exports.simpleExecute = simpleExecute
+
+// Objetivo: Encerrar o Pool de conexoes do Banco de dados
+async function encerra() {
+    await oracledb.getPool().close();
+}
+   
+module.exports.encerra = encerra;
