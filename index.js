@@ -3,7 +3,7 @@ const database = require('./services/database.js')
 const dbConfig = require('./config/database.js')
 
 const defaultThreadPoolSize = 4
-process.env.UV_THREADPOOL_SIZE = dbConfig.hrPool.poolMax + defaultThreadPoolSize
+process.env.UV_THREADPOOL_SIZE = dbConfig.rmPool.poolMax + defaultThreadPoolSize
 
 async function startup(){
     console.log('Iniciando aplicacao...')
