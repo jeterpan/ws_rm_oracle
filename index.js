@@ -45,6 +45,16 @@ async function shutdown(e) {
 
         err = err || e
     }
+    
+    try {
+        console.log('Encerrando o modulo de Banco de dados');
+
+        await database.encerra(); 
+    } catch (e) {
+        console.log('Erro encontrado ao encerrar pool de conexoes', e);
+
+        erro = erro || e;
+    }
 
     console.log('Saindo do processo')
 
